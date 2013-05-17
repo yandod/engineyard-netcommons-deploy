@@ -3,7 +3,7 @@ if !File.exist?(current_path + "/html/webapp/config/install.inc.php") then
   run "cp #{current_path}/html/webapp/config/install.inc.php #{shared_path}/config/install.inc.php"
 end
 
-if !File.exist?(shared_path + "/config/install.inc.php") then
+if !File.exist(shared_path + "/config/install.inc.php") then
   run "ln -s #{shared_path}/config/install.inc.php #{release_path}/html/webapp/config/install.inc.php"
 end
 
