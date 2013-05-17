@@ -3,6 +3,7 @@ if File.exist?(current_path + "/html/webapp/config/install.inc.php") then
   #config
   run "cp #{current_path}/html/webapp/config/install.inc.php #{shared_path}/config/install.inc.php"
   # images js themes
+  run "mkdir #{shared_path}/htdocs"
   run "cp -R #{current_path}/html/htdocs/images #{shared_path}/htdocs/images"
   run "cp -R #{current_path}/html/htdocs/js #{shared_path}/htdocs/js"
   run "cp -R #{current_path}/html/htdocs/themes #{shared_path}/htdocs/themes"
