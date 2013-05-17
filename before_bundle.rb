@@ -1,5 +1,5 @@
 # html/webapp/config/install.inc.php
-if !File.exist?(current_path + "/html/webapp/config/install.inc.php") then
+if File.exist?(current_path + "/html/webapp/config/install.inc.php") then
   #config
   run "cp #{current_path}/html/webapp/config/install.inc.php #{shared_path}/config/install.inc.php"
   # images js themes
